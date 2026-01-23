@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="emerald">#059669</color>
-    <color name="orange">#F97316</color>
-    <color name="blue">#3B82F6</color>
-    <color name="purple">#8B5CF6</color>
+    <!-- Cores principais -->
+    <color name="primary">#10B981</color>
+    <color name="primary_dark">#059669</color>
+    <color name="secondary">#F97316</color>
+    <color name="tertiary">#9333EA</color>
+    <color name="pink">#EC4899</color>
+
+    <!-- Backgrounds -->
+    <color name="background">#F9FAFB</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Texto -->
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#6B7280</color>
+
+    <!-- Cores neutras -->
     <color name="white">#FFFFFF</color>
-    <color name="bg">#F8FAFC</color>
-    <color name="gray">#6B7280</color>
-    <color name="bottom_nav_active">#059669</color>
-    <color name="bottom_nav_inactive">#9CA3AF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="gray_200">#E5E7EB</color>
+    <color name="gray_300">#D1D5DB</color>
+    <color name="gray_400">#9CA3AF</color>
+    <color name="black">#000000</color>
+
+    <!-- Bottom Navigation -->
+    <color name="bottom_nav_selected">#10B981</color>
+    <color name="bottom_nav_unselected">#6B7280</color>
 </resources>

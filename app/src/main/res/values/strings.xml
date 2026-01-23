@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">IPTFit</string>
+
+    <!-- Navegação -->
+    <string name="home">Início</string>
+    <string name="activity">Atividade</string>
+    <string name="profile">Perfil</string>
+
+    <!-- Home Fragment -->
+    <string name="greeting">Olá, %s!</string>
+    <string name="workouts_today">Treinos Hoje</string>
+    <string name="calories">Calorias</string>
+    <string name="daily_goal">Meta Diária</string>
+    <string name="available_workouts">Treinos Disponíveis</string>
+    <string name="goal_progress">%1$d / %2$d calorias</string>
+
+    <!-- Workout -->
+    <string name="start">Iniciar</string>
+    <string name="redo">Refazer</string>
+    <string name="minutes_format">%d min</string>
+    <string name="calories_format">%d cal</string>
+
+    <!-- Activity Fragment -->
+    <string name="this_week">Esta Semana</string>
+    <string name="history">Histórico</string>
+    <string name="no_workouts">Nenhum treino realizado</string>
+    <string name="start_now">Comece agora!</string>
+
+    <!-- Profile Fragment -->
+    <string name="tap_to_edit">Toque para editar</string>
+    <string name="daily_goal_title">Meta Diária</string>
+    <string name="statistics">Estatísticas</string>
+    <string name="total_workouts">Total de Treinos</string>
+    <string name="calories_burned">Calorias Queimadas</string>
+    <string name="active_time">Tempo Ativo</string>
+
+    <!-- Dias da semana -->
+    <string name="monday">S</string>
+    <string name="tuesday">T</string>
+    <string name="wednesday">Q</string>
+    <string name="thursday">Q</string>
+    <string name="friday">S</string>
+    <string name="saturday">S</string>
+    <string name="sunday">D</string>
 </resources>
