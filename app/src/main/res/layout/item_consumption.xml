@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Imagem do produto -->
+        <ImageView
+            android:id="@+id/ivProductThumb"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- Nome do produto -->
+        <TextView
+            android:id="@+id/tvItemProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/product_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="@id/ivProductThumb"
+            app:layout_constraintStart_toEndOf="@id/ivProductThumb"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Marca -->
+        <TextView
+            android:id="@+id/tvItemBrands"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/brand_name_text"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/tvItemProductName"
+            app:layout_constraintStart_toEndOf="@id/ivProductThumb"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Informação nutricional -->
+        <TextView
+            android:id="@+id/tvItemCalories"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/default_calorie_quantity"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/ivProductThumb"
+            app:layout_constraintTop_toBottomOf="@id/tvItemBrands" />
+
+        <!-- Data de consumo -->
+        <TextView
+            android:id="@+id/tvItemDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/default_date"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="@id/ivProductThumb"
+            app:layout_constraintStart_toEndOf="@id/ivProductThumb"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Botão eliminar -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
