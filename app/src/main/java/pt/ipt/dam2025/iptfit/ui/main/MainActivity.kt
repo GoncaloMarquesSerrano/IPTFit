@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.google.android.material.card.MaterialCardView
 import kotlinx.coroutines.launch
 import pt.ipt.dam2025.iptfit.IPTFitApplication
 import pt.ipt.dam2025.iptfit.R
@@ -47,13 +48,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ScannerActivity::class.java))
         }
 
-        // Botão para histórico
-        binding.btnViewHistory.setOnClickListener {
+        // ENCONTRAR OS CARDS DENTRO DO buttonGrid
+        // O primeiro filho (índice 0) é o card do Histórico
+        // O segundo filho (índice 1) é o card do Sobre
+        val cardHistory = binding.buttonGrid.getChildAt(0) as MaterialCardView
+        val cardAbout = binding.buttonGrid.getChildAt(1) as MaterialCardView
+
+        // Card para histórico - clique em TODO O CARD
+        cardHistory.setOnClickListener {
             startActivity(Intent(this, HistoryActivity::class.java))
         }
 
-        // Botão sobre
-        binding.btnAbout.setOnClickListener {
+        // Card para sobre - clique em TODO O CARD
+        cardAbout.setOnClickListener {
             startActivity(Intent(this, AboutActivity::class.java))
         }
 
@@ -73,14 +80,14 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 val totalConsumptions = app.repository.getTotalConsumptionCount(userId)
-                binding.tvTotalScans.text = "Total de produtos: $totalConsumptions"
+                binding.tvTotalScans.text = "$totalConsumptions"
 
                 // Calcular calorias de hoje
                 val startOfDay = getStartOfDay()
                 val endOfDay = System.currentTimeMillis()
                 val todayCalories = app.repository.getTotalCalories(userId, startOfDay, endOfDay)
 
-                binding.tvTodayCalories.text = "Calorias hoje: ${String.format("%.0f", todayCalories)} kcal"
+                binding.tvTodayCalories.text = "${String.format("%.0f", todayCalories)} kcal"
             } catch (e: Exception) {
                 e.printStackTrace()
             }
