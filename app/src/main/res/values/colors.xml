@@ -1,25 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Cores principais baseadas no logo -->
+    <color name="primary_dark">#003366</color>
+    <color name="primary">#1a3c6e</color>
+    <color name="primary_light">#4a5f85</color>
 
-    <!-- Theme Colors -->
-    <color name="primary">#4CAF50</color>
-    <color name="primary_dark">#388E3C</color>
-    <color name="primary_light">#C8E6C9</color>
-    <color name="accent">#FF9800</color>
+    <!-- Cores secundárias -->
+    <color name="secondary">#1E88E5</color>
+    <color name="secondary_light">#64b5f6</color>
+    <color name="secondary_dark">#0d47a1</color>
 
-    <!-- Nutri-Score Colors -->
-    <color name="nutriscore_a">#038141</color>
-    <color name="nutriscore_b">#85BB2F</color>
-    <color name="nutriscore_c">#FECB02</color>
-    <color name="nutriscore_d">#EE8100</color>
-    <color name="nutriscore_e">#E63E11</color>
+    <!-- Cores de destaque/accent -->
+    <color name="accent">#66BB6A</color>
+    <color name="accent_light">#98ee99</color>
+    <color name="accent_dark">#338a3e</color>
 
-    <!-- UI Colors -->
-    <color name="background">#FAFAFA</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="error">#B00020</color>
+    <!-- Cores de texto -->
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_accent">#FFFFFF</color>
+    <color name="text_link">#1E88E5</color>
+
+    <!-- Cores de background -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="background_light">#F5F9FF</color>
+    <color name="background_dark">#F0F4FA</color>
+
+    <!-- Cores de estado -->
+    <color name="error">#F44336</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="info">#2196F3</color>
+
+    <!-- Cores de bordas e divisores -->
+    <color name="border_light">#E0E0E0</color>
+    <color name="border_medium">#BDBDBD</color>
+    <color name="border_dark">#616161</color>
+    <color name="divider">#EEEEEE</color>
+
+    <!-- Cores para ícones -->
+    <color name="icon_active">#1E88E5</color>
+    <color name="icon_inactive">#9E9E9E</color>
+    <color name="icon_white">#FFFFFF</color>
+
+    <!-- Cores específicas para componentes -->
+    <color name="card_stats_border">#66BB6A</color>
+    <color name="button_primary_background">#003366</color>
+    <color name="button_secondary_background">#F5F9FF</color>
+
+    <!-- Cores para nutri-score -->
+    <color name="nutriscore_a">#008B45</color>
+    <color name="nutriscore_b">#86BC25</color>
+    <color name="nutriscore_c">#FECC00</color>
+    <color name="nutriscore_d">#EF8200</color>
+    <color name="nutriscore_e">#E63B00</color>
+    <color name="nutriscore_default">#66BB6A</color>
+
+    <!-- Cores do scanner -->
+    <color name="scanner_overlay">#66003366</color>
+    <color name="scanner_line">#FF1E88E5</color>
+    <color name="scanner_border">#FF1E88E5</color>
+
+    <!-- Transparências -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
+    <color name="semi_transparent_black">#80000000</color>
+    <color name="primary_dark_20">#33003366</color>
+    <color name="secondary_20">#331E88E5</color>
+    <color name="accent_20">#3366BB6A</color>
 </resources>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Background para o Nutri-Score -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
-    <solid android:color="#4CAF50"/>
+    <solid android:color="@color/nutriscore_default"/>
     <size
-        android:width="40dp"
-        android:height="40dp"/>
+        android:width="48dp"
+        android:height="48dp"/>
 </shape>

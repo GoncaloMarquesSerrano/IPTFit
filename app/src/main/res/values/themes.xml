@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Base application theme -->
-    <style name="Theme.IPTFit" parent="Theme.Material3.Light">
-        <item name="colorPrimary">@color/primary</item>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema principal -->
+    <style name="Theme.IPTFit" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Cores principais -->
+        <item name="colorPrimary">@color/primary_dark</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorSecondary">@color/secondary</item>
         <item name="colorAccent">@color/accent</item>
+
+        <!-- Cores do sistema -->
         <item name="android:statusBarColor">@color/primary_dark</item>
-        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Referência ao estilo TextInputLayout -->
+        <item name="textInputStyle">@style/Widget.IPTFit.TextInputLayout</item>
     </style>
 
-    <!-- Theme without ActionBar for Splash/Login -->
-    <style name="Theme.IPTFit.NoActionBar">
+    <!-- Tema sem ActionBar -->
+    <style name="Theme.IPTFit.NoActionBar" parent="Theme.IPTFit">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- ESTILO DO TextInputLayout -->
+    <style name="Widget.IPTFit.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/secondary</item>
+        <item name="hintTextColor">@color/text_hint</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxBackgroundColor">@color/background</item>
     </style>
 </resources>

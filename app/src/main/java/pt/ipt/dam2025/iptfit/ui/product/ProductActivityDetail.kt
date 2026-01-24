@@ -107,9 +107,7 @@ class ProductDetailActivity : AppCompatActivity() {
         binding.tvEnergy.text = "${formatFloat(energyKcal)} kcal"
         binding.tvProteins.text = "${formatFloat(proteins)} g"
         binding.tvCarbs.text = "${formatFloat(carbs)} g"
-        binding.tvSugars.text = "${formatFloat(sugars)} g"
         binding.tvFats.text = "${formatFloat(fats)} g"
-        binding.tvSaturatedFats.text = "${formatFloat(saturatedFats)} g"
         binding.tvFiber.text = "${formatFloat(fiber)} g"
         binding.tvSalt.text = "${formatFloat(salt)} g"
     }
@@ -158,7 +156,7 @@ class ProductDetailActivity : AppCompatActivity() {
                 result.onSuccess {
                     Toast.makeText(
                         this@ProductDetailActivity,
-                        "✅ Produto guardado no histórico!",
+                        "Produto guardado no histórico!",
                         Toast.LENGTH_LONG
                     ).show()
                     finish()
