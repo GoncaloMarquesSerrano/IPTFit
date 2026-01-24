@@ -79,4 +79,6 @@
     <string name="back_button">Voltar</string>
     <string name="profile_image_description">Foto de perfil do usuário</string>
     <string name="change_photo_description">Trocar foto de perfil</string>
+    <string name="ano_letivo">Ano Letivo:</string>
+    <string name="institui_o">Instituição:</string>
 </resources>

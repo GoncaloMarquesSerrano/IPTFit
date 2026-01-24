@@ -136,7 +136,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ano Letivo:"
+                            android:text="@string/ano_letivo"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/text_primary"/>
@@ -157,7 +157,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Instituição:"
+                            android:text="@string/institui_o"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/text_primary"/>
@@ -316,8 +316,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp">
+                android:layout_marginTop="16dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -344,6 +343,185 @@
                         android:textSize="16sp"
                         android:textColor="@color/text_primary"
                         android:lineSpacingExtra="6dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card Bibliotecas e APIs -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bibliotecas e APIs Utilizadas"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_dark"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- CameraX -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• CameraX - Acesso à câmara"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  https://developer.android.com/training/camerax"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:autoLink="web"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- ML Kit -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• ML Kit Barcode Scanning - Leitura de códigos"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  https://developers.google.com/ml-kit"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:autoLink="web"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Retrofit -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Retrofit - Cliente HTTP REST"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  https://square.github.io/retrofit/"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:autoLink="web"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Room Database -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Room Database - Persistência local"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  https://developer.android.com/training/data-storage/room"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:autoLink="web"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Glide -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Glide - Carregamento de imagens"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  https://github.com/bumptech/glide"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:autoLink="web"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Kotlin Coroutines -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Kotlin Coroutines - Programação assíncrona"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  https://kotlinlang.org/docs/coroutines-overview.html"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:autoLink="web"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Material Design -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Material Design Components - UI/UX"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  https://material.io/develop/android"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:autoLink="web"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Open Food Facts API -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Open Food Facts API - Dados nutricionais"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  https://world.openfoodfacts.org/"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:autoLink="web"
+                        android:layout_marginBottom="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Base de dados colaborativa de produtos alimentares"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:fontFamily="sans-serif-light"/>
 
                 </LinearLayout>
 
