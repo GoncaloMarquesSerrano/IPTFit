@@ -72,9 +72,8 @@
     <string name="default_fiber_quantity">0 g</string>
     <string name="default_salt_content">0 g</string>
     <string name="default_date">01/01/2026 12:00</string>
-    <string name="scanner_title">Scanner de códigos</string>
-    <string name="product_detail_title">Detalhes do produto</string>
-    <string name="history_title">Histórico de Consumo</string>
+    <string name="scanner_title">Scanner de Códigos</string>
+    <string name="product_detail_title">Detalhes do Produto</string>
+    <string name="history_title">Histórico de Consumos</string>
     <string name="about_title">Sobre</string>
-
 </resources>
