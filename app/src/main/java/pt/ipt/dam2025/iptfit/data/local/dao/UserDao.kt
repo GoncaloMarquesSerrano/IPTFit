@@ -3,9 +3,6 @@ package pt.ipt.dam2025.iptfit.data.local.dao
 import androidx.room.*
 import pt.ipt.dam2025.iptfit.data.local.entity.User
 
-/**
- * Data Access Object para a entidade User
- */
 @Dao
 interface UserDao {
 
@@ -38,4 +35,12 @@ interface UserDao {
 
     @Query("SELECT * FROM users WHERE isActive = 1")
     suspend fun getAllActiveUsers(): List<User>
+
+    // ===== NOVOS MÉTODOS PARA FOTO DE PERFIL =====
+
+    @Query("UPDATE users SET photoPath = :photoPath WHERE id = :userId")
+    suspend fun updateUserPhoto(userId: Long, photoPath: String?)
+
+    @Query("SELECT photoPath FROM users WHERE id = :userId")
+    suspend fun getUserPhotoPath(userId: Long): String?
 }

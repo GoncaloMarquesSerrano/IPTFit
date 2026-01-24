@@ -77,4 +77,6 @@
     <string name="history_title">Histórico de Consumos</string>
     <string name="about_title">Sobre</string>
     <string name="back_button">Voltar</string>
+    <string name="profile_image_description">Foto de perfil do usuário</string>
+    <string name="change_photo_description">Trocar foto de perfil</string>
 </resources>

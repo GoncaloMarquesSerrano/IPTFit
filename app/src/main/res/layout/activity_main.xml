@@ -11,27 +11,49 @@
         android:layout_height="wrap_content"
         android:padding="20dp">
 
-        <!-- Logo com fundo circular -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardLogo"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            app:cardCornerRadius="45dp"
-            app:cardBackgroundColor="@color/icon_white"
-            app:cardElevation="6dp"
+        <!-- Foto de perfil do usuário com botão para trocar -->
+        <FrameLayout
+            android:id="@+id/profileContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp">
 
-            <ImageView
-                android:id="@+id/ivAppLogo"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardLogo"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@drawable/logo"
-                android:layout_gravity="center"/>
+                app:cardCornerRadius="45dp"
+                app:cardBackgroundColor="@color/icon_white"
+                app:cardElevation="6dp"
+                app:strokeColor="@color/secondary"
+                app:strokeWidth="1dp">
 
-        </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:id="@+id/ivUserProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Foto de perfil do usuário"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Botão flutuante para trocar foto -->
+            <ImageView
+                android:id="@+id/btnChangePhoto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="bottom|end"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:background="@drawable/circle_background"
+                android:padding="6dp"
+                android:contentDescription="Trocar foto de perfil"
+                android:elevation="4dp"/>
+
+        </FrameLayout>
 
         <!-- Título de boas-vindas -->
         <TextView
@@ -42,7 +64,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/primary_dark"
-            app:layout_constraintTop_toBottomOf="@id/cardLogo"
+            app:layout_constraintTop_toBottomOf="@id/profileContainer"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp"/>

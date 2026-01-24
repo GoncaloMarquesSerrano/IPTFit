@@ -100,4 +100,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit.v115)
     androidTestImplementation(libs.androidx.espresso.core.v351)
+
+    // GLIDE - para fotos
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    // MATERIAL - para o card redondo
+    implementation("com.google.android.material:material:1.11.0")
+
 }

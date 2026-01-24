@@ -1,5 +1,6 @@
 package pt.ipt.dam2025.iptfit.data.repository
 
+import android.content.Context
 import kotlinx.coroutines.flow.Flow
 import pt.ipt.dam2025.iptfit.data.local.dao.ConsumptionDao
 import pt.ipt.dam2025.iptfit.data.local.dao.UserDao
@@ -7,7 +8,8 @@ import pt.ipt.dam2025.iptfit.data.local.entity.Consumption
 import pt.ipt.dam2025.iptfit.data.local.entity.User
 import pt.ipt.dam2025.iptfit.data.remote.OpenFoodFactsApi
 import pt.ipt.dam2025.iptfit.data.remote.model.ProductResponse
-import retrofit2.Response
+import java.io.File
+import java.io.FileOutputStream
 
 /**
  * Repositório que centraliza o acesso aos dados (local e remoto)
@@ -15,7 +17,8 @@ import retrofit2.Response
 class IPTFitRepository(
     private val userDao: UserDao,
     private val consumptionDao: ConsumptionDao,
-    private val api: OpenFoodFactsApi
+    private val api: OpenFoodFactsApi,
+    private val context: Context  // PARÂMETRO ADICIONADO
 ) {
 
     // ==================== USER OPERATIONS ====================
@@ -58,6 +61,46 @@ class IPTFitRepository(
 
     suspend fun updateUser(user: User) {
         userDao.update(user)
+    }
+
+    // ==================== FOTO DE PERFIL ====================
+
+    suspend fun updateUserProfilePhoto(userId: Long, photoPath: String?) {
+        userDao.updateUserPhoto(userId, photoPath)
+    }
+
+    suspend fun getUserProfilePhoto(userId: Long): String? {
+        return userDao.getUserPhotoPath(userId)
+    }
+
+    suspend fun saveImageAndUpdateUser(userId: Long, imageUri: android.net.Uri): Result<String> {
+        return try {
+            val savedPath = saveImageToInternalStorage(imageUri, userId)
+            updateUserProfilePhoto(userId, savedPath)
+            Result.success(savedPath)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    private fun saveImageToInternalStorage(uri: android.net.Uri, userId: Long): String {
+        val inputStream = context.contentResolver.openInputStream(uri)
+            ?: throw Exception("Não foi possível abrir a imagem")
+
+        val profileDir = File(context.filesDir, "profiles")
+        if (!profileDir.exists()) {
+            profileDir.mkdirs()
+        }
+
+        val fileName = "user_${userId}_profile.jpg"
+        val file = File(profileDir, fileName)
+
+        FileOutputStream(file).use { outputStream ->
+            inputStream.copyTo(outputStream)
+        }
+        inputStream.close()
+
+        return file.absolutePath
     }
 
     // ==================== CONSUMPTION OPERATIONS ====================

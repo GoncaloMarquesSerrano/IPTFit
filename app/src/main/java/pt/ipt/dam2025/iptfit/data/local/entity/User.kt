@@ -19,7 +19,7 @@ data class User(
 
     val email: String,
 
-    val photoPath: String? = null, // Caminho da foto de perfil
+    val photoPath: String? = null,
 
     val createdAt: Long = System.currentTimeMillis(),
 

@@ -18,9 +18,10 @@ class IPTFitApplication : Application() {
     // Repositório
     val repository by lazy {
         IPTFitRepository(
-            database.userDao(),
-            database.consumptionDao(),
-            RetrofitClient.api
+            userDao = database.userDao(),
+            consumptionDao = database.consumptionDao(),
+            api = RetrofitClient.api,
+            context = applicationContext
         )
     }
 
