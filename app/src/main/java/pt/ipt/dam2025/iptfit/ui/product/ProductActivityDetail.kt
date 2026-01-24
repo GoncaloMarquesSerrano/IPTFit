@@ -59,6 +59,10 @@ class ProductDetailActivity : AppCompatActivity() {
         binding.btnSaveConsumption.setOnClickListener {
             saveConsumption()
         }
+
+        binding.fabBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun extractDataFromIntent() {

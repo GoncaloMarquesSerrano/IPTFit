@@ -14,7 +14,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:paddingTop="60dp"> <!-- Adicionado padding para a seta não cobrir conteúdo -->
 
             <!-- Card da imagem e info básica -->
             <com.google.android.material.card.MaterialCardView
@@ -352,6 +353,20 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <!-- Seta de voltar no canto superior esquerdo -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="top|start"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:backgroundTint="@color/primary_dark"
+        app:tint="@color/icon_white"
+        app:elevation="6dp"
+        app:rippleColor="@color/accent"
+        android:contentDescription="@string/back_button" />
 
     <!-- Botão Guardar FIXO no fundo -->
     <com.google.android.material.button.MaterialButton

@@ -76,4 +76,5 @@
     <string name="product_detail_title">Detalhes do Produto</string>
     <string name="history_title">Histórico de Consumos</string>
     <string name="about_title">Sobre</string>
+    <string name="back_button">Voltar</string>
 </resources>

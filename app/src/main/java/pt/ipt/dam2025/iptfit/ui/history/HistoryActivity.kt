@@ -28,8 +28,15 @@ class HistoryActivity : AppCompatActivity() {
 
         app = application as IPTFitApplication
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // Configurar Toolbar como ActionBar
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) // Habilita botão de voltar
         supportActionBar?.title = "Histórico de Consumos"
+
+        // Configurar clique no botão de voltar da Toolbar
+        binding.toolbar.setNavigationOnClickListener {
+            finish() // Volta para a MainActivity
+        }
 
         setupRecyclerView()
         loadHistory()
@@ -113,6 +120,7 @@ class HistoryActivity : AppCompatActivity() {
         }
     }
 
+    // Este método também funciona para o botão de voltar
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
