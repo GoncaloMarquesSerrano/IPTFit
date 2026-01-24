@@ -38,10 +38,10 @@
     <string name="brand_name_text">Marca</string>
     <string name="delete_text">Eliminar</string>
     <string name="about_info">Informação Académica</string>
-    <string name="course_info">Curso: Licenciatura em Engenharia Informática</string>
-    <string name="uc_info">Disciplina: Desenvolvimento de Aplicações Móveis</string>
-    <string name="year_info">Ano Letivo: 2025/26</string>
-    <string name="school_info">Instituição: Instituto Politécnico de Tomar</string>
+    <string name="course_info">Licenciatura em Engenharia Informática</string>
+    <string name="uc_info">Desenvolvimento de Aplicações Móveis</string>
+    <string name="year_info">2025/26</string>
+    <string name="school_info">Instituto Politécnico de Tomar</string>
     <string name="creator_info">Autores</string>
     <string name="error_login">Credenciais inválidas</string>
     <string name="error_network">Erro de rede. Verifique a sua ligação.</string>
@@ -62,8 +62,8 @@
     <string name="app_info">Sobre a Aplicação</string>
     <string name="app_description">IPTFit é uma aplicação que permite aos utilizadores digitalizar códigos de barras de produtos alimentares e consultar informação nutricional detalhada.\n\nA aplicação guarda um histórico de consumos e permite acompanhar a ingestão calórica diária.\n</string>
     <string name="default_greeting">Olá, Utilizador!</string>
-    <string name="default_calories">Calorias hoje: 0 kcal</string>
-    <string name="default_products">Total de produtos: 0</string>
+    <string name="default_calories">0 kcal</string>
+    <string name="default_products">0</string>
     <string name="digitalize_product">Digitalizar Produto</string>
     <string name="default_code">Código: 1234567890123</string>
     <string name="default_calorie_quantity">0 kcal</string>
@@ -76,4 +76,5 @@
     <string name="product_detail_title">Detalhes do Produto</string>
     <string name="history_title">Histórico de Consumos</string>
     <string name="about_title">Sobre</string>
+    <string name="back_button">Voltar</string>
 </resources>

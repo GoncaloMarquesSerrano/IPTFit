@@ -17,7 +17,7 @@ interface OpenFoodFactsApi {
      * @param barcode Código de barras EAN-13, EAN-8, UPC-A ou UPC-E
      * @return Resposta com dados do produto
      */
-    @GET("api/v0/product/{barcode}.json")
+    @GET("api/v2/product/{barcode}.json")
     suspend fun getProduct(
         @Path("barcode") barcode: String
     ): Response<ProductResponse>

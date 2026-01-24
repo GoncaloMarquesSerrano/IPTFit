@@ -3,45 +3,111 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark">
+
+    <!-- Seta de voltar no canto superior esquerdo -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:backgroundTint="@color/semi_transparent_black"
+        app:tint="@color/icon_white"
+        app:elevation="6dp"
+        app:rippleColor="@color/secondary"
+        android:contentDescription="@string/back_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.camera.view.PreviewView
         android:id="@+id/previewView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+    <!-- Overlay escuro -->
     <View
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:background="@drawable/scanner_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/semi_transparent_black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- Área de scan com borda azul -->
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Borda -->
+        <View
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/scanner_overlay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Linha de scan animada -->
+        <View
+            android:id="@+id/scanLine"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@color/scanner_line"
+            android:layout_margin="2dp"/>
+
+    </FrameLayout>
+
+    <!-- Instruções -->
     <TextView
         android:id="@+id/tvStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/camera_point_text"
-        android:textColor="@android:color/white"
-        android:background="#80000000"
-        android:padding="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/text_on_primary"
+        android:background="@color/semi_transparent_black"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        app:cornerRadius="20dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="48dp"/>
 
-    <Button
+    <!-- Botão de entrada manual -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnManualInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/barcode_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_on_primary"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        app:icon="@android:drawable/ic_menu_edit"
+        app:iconSize="20dp"
+        app:iconTint="@color/icon_white"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="48dp"
+        app:strokeColor="@color/secondary"
+        app:strokeWidth="2dp"
+        android:backgroundTint="@color/semi_transparent_black"/>
 
+    <!-- ProgressBar -->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"

@@ -57,6 +57,10 @@ class ScannerActivity : AppCompatActivity() {
         binding.btnManualInput.setOnClickListener {
             showManualInputDialog()
         }
+
+        binding.fabBack.setOnClickListener {
+            finish() // Volta para a MainActivity
+        }
     }
 
     @OptIn(ExperimentalGetImage::class)

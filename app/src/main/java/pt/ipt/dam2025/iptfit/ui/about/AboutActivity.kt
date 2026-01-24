@@ -28,6 +28,10 @@ class AboutActivity : AppCompatActivity() {
         binding.tvAuthor2Name.text = "Gonçalo Marques Serrano"
         binding.tvAuthor2Number.text = "Nº 25948"
         binding.ivAuthor2Photo.setImageResource(R.drawable.goncalo)
+
+        binding.fabBack.setOnClickListener {
+            finish()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
